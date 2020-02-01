@@ -12,7 +12,7 @@ let Todo = require('./todo.model');
 app.use(cors());
 app.use(bodyParser.json());
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://Samuel:Santhosh@29@cluster0-ftlgh.mongodb.net/test?retryWrites=true&w=majority/todos', { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://<dbuser>:<dbpassword>@ds345587.mlab.com:45587/heroku_rthn7wpp', { useNewUrlParser: true });
 const connection = mongoose.connection;
 
 connection.once('open', function() {
